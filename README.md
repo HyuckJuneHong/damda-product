@@ -6,6 +6,6 @@
 
 # 프로젝트 기록
 <ol>
-<h3>23/02/02</h3>
   <li>Product Server 생성</li>
+  <li>Swagger 구축</li>
 </ol>
