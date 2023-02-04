@@ -16,6 +16,10 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
+    /**
+     * all product info read service
+     * @return all product info
+     */
     public List<ResponseDto.READ_PRODUCT_INFO> getAllProductsInfo(){
         final List<ResponseDto.READ_PRODUCT_INFO> readProductInfos = ProductEntity.of(productRepository.findAll());
         return readProductInfos;
