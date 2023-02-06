@@ -1,14 +1,12 @@
 package kr.co.damdaproduct.jpa;
 
-import kr.co.damdaproduct.dto.ResponseDto;
+import kr.co.dto.ResponseProductDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,8 +43,8 @@ public class ProductEntity {
         this.price = price;
     }
 
-    public static ResponseDto.READ_PRODUCT_INFO of(ProductEntity productEntity){
-        return ResponseDto.READ_PRODUCT_INFO.builder()
+    public static ResponseProductDto.READ_PRODUCT_INFO of(ProductEntity productEntity){
+        return ResponseProductDto.READ_PRODUCT_INFO.builder()
                 .productCode(productEntity.getProductCode())
                 .productName(productEntity.productName)
                 .amount(productEntity.amount)
@@ -54,11 +52,11 @@ public class ProductEntity {
                 .build();
     }
 
-    public static List<ResponseDto.READ_PRODUCT_INFO> of(List<ProductEntity> productEntities){
-        List<ResponseDto.READ_PRODUCT_INFO> readProductInfos = new ArrayList<>();
+    public static List<ResponseProductDto.READ_PRODUCT_INFO> of(List<ProductEntity> productEntities){
+        List<ResponseProductDto.READ_PRODUCT_INFO> readProductInfos = new ArrayList<>();
 
         for(ProductEntity productEntity : productEntities){
-            ResponseDto.READ_PRODUCT_INFO readProductInfo = ProductEntity.of(productEntity);
+            ResponseProductDto.READ_PRODUCT_INFO readProductInfo = ProductEntity.of(productEntity);
             readProductInfos.add(readProductInfo);
         }
 

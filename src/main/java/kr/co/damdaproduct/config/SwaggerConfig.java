@@ -1,4 +1,4 @@
-package kr.co.damdaproduct.infra.config;
+package kr.co.damdaproduct.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
