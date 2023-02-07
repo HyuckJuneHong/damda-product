@@ -1,6 +1,6 @@
 package kr.co.damdaproduct.jpa;
 
-import kr.co.dto.ResponseProductDto;
+import kr.co.damdaproduct.dto.ResponseDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -43,8 +43,8 @@ public class ProductEntity {
         this.price = price;
     }
 
-    public static ResponseProductDto.READ_PRODUCT_INFO of(ProductEntity productEntity){
-        return ResponseProductDto.READ_PRODUCT_INFO.builder()
+    public static ResponseDto.READ_PRODUCT_INFO of(ProductEntity productEntity){
+        return ResponseDto.READ_PRODUCT_INFO.builder()
                 .productCode(productEntity.getProductCode())
                 .productName(productEntity.productName)
                 .amount(productEntity.amount)
@@ -52,11 +52,11 @@ public class ProductEntity {
                 .build();
     }
 
-    public static List<ResponseProductDto.READ_PRODUCT_INFO> of(List<ProductEntity> productEntities){
-        List<ResponseProductDto.READ_PRODUCT_INFO> readProductInfos = new ArrayList<>();
+    public static List<ResponseDto.READ_PRODUCT_INFO> of(List<ProductEntity> productEntities){
+        List<ResponseDto.READ_PRODUCT_INFO> readProductInfos = new ArrayList<>();
 
         for(ProductEntity productEntity : productEntities){
-            ResponseProductDto.READ_PRODUCT_INFO readProductInfo = ProductEntity.of(productEntity);
+            ResponseDto.READ_PRODUCT_INFO readProductInfo = ProductEntity.of(productEntity);
             readProductInfos.add(readProductInfo);
         }
 
