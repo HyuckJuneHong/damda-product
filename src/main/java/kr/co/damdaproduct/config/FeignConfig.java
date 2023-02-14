@@ -1,7 +1,7 @@
 package kr.co.damdaproduct.config;
 
 import feign.Logger;
-import kr.co.damdaproduct.handler.client.FeignErrorDecoder;
+import kr.co.damdaproduct.error.handler.client.FeignErrorDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

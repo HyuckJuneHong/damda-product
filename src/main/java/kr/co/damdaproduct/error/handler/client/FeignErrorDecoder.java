@@ -1,4 +1,4 @@
-package kr.co.damdaproduct.handler.client;
+package kr.co.damdaproduct.error.handler.client;
 
 import feign.Response;
 import feign.codec.ErrorDecoder;

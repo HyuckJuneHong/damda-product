@@ -1,8 +1,8 @@
 package kr.co.damdaproduct.controller;
 
 import kr.co.damdaproduct.dto.ResponseDto;
+import kr.co.damdaproduct.error.model.ResponseFormat;
 import kr.co.damdaproduct.service.ProductService;
-import kr.co.error.model.ResponseFormat;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
